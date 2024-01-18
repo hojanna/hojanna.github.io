@@ -10,10 +10,13 @@ $(document).ready(function(){
     verticalSwiping:true,
   })
   /* brunch recommend */
-  // $('.brunch_recommend.sliders').slick({
-  //   dots:true,
-  //   infinite:false,
-  //   slidesToShow:1,
-  //   centerMode:true,
-  // })
+  $('.brunch_recommend.sliders').slick({
+    centerMode: true,
+    centerPadding: '60px',
+    slidesToShow: 3,
+    dots:true,
+    infinite:false,
+    variableWidth:true,
+    arrows:true,
+  })
 })
