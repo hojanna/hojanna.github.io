@@ -19,14 +19,11 @@ $(document).ready(function(){
     arrows:true,
   })
   /* brunch_article */
-  $('.brunch_articles_sliders').slick({
-    cnterMode:true,
-    slidesToShow :3,
+ $('.brunch_articles_sliders').slick({
     dots:false,
-    infinite:false,
-    variableWidth:true,
     arrows:true,
-  })
+    slideToShow:5,
+ });
   /* tab메뉴 */
   $('.brunch_weekly_tab').click(function(){
     $(this).addClass('active')
