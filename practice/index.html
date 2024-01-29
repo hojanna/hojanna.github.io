@@ -7,6 +7,7 @@
   <meta property="og:discription" content="작품이되는 이야기">
   <meta property="og:url" content="https://brunch.co.kr/#sat#PUBLISH_TIME">
   <meta property="image" content="https://picsum.photos/300/100">
+  <link rel="icon" href="images/main_favicon.png">
   <link rel="stylesheet" href="ionicons/css/ionicons.min.css">
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
@@ -24,8 +25,11 @@
   <div class="brunch_container">
     <!-- header -->
     <header>
+      <!-- header_more(sidebar) -->
+      <div class="close_overlay"></div>
       <div class="header_more">
         <div class="header_more_top">
+          <div class="header_more_top_img"></div>
           <div>
             <h5>You can make anything<br>by writing</h5>
             <h6>C.S.Lewis</h6>
@@ -36,14 +40,14 @@
         </div>
         <div class="header_more_bottom">
           <div class="header_more_bottom_menu">
-            <div>브런치스토리 홈</div>
-            <div>브런치스토리 나우</div>
-            <div>브런치스토리 책방</div>
+            <a href="#none">브런치스토리 홈</a>
+            <a href="#none">브런치스토리 나우</a>
+            <a href="#none">브런치스토리 책방</a>
           </div>
           <div class="header_more_bottom_content">
-            <div>
-              작가-지원<br>프로젝트 보러가기
-            </div>
+            <a href="#none">
+              <div class="header_more_bottom_img"></div>
+            </a>
             <div>
               <a href="#none">계정을 잊어버리셨나요?</a>
             </div>
@@ -51,15 +55,17 @@
         </div>
         <div></div>
       </div>
+      <!-- //header_more(sidebar) -->
+      <!-- header_title(main) -->
       <div class="header_title">
-        <!-- header side_l -->
         <div class="header_side_l">
-          <i class="icon ion-md-menu"></i>
+          <button class="menu_more_button">
+            <i class="icon ion-md-menu"></i>
+          </button>
           <div class="header_logo">
             brunchstory
           </div>
         </div>
-        <!-- header side_2 -->
         <div class="header_side_r">
           <div class="header_side_start">
             시작하기
@@ -69,7 +75,10 @@
           </div>
         </div>
       </div>
+      <!-- //header_title(main) -->
+      <!-- //header -->
     </header>
+    <!-- //header -->
     <!-- brunch_intro -->
     <section class="brunch_intro">
       <div class="intro_title">
@@ -79,6 +88,7 @@
         <h3>서랍 속 간직하고 있는 글과 감성을.</h3>
       </div>
     </section>
+    <!-- //brunch_intro -->
     <!-- brunch_news -->
     <div class="brunch_news">
       <div class="brunch_news sliders">
@@ -96,6 +106,7 @@
         </div>
       </div>
     </div>
+    <!-- //brunch_news -->
     <!-- brunch_recommend -->
     <section class="brunch_recommend">
       <div class="brunch_recommend sliders">
@@ -431,6 +442,7 @@
         </div>
       </div>
     </section>
+    <!-- //brunch_recommend -->
     <!-- brunch_keyword -->
     <section class="brunch_keyword">
       <div class="brunch_keyword_inner">
@@ -521,6 +533,7 @@
         </div>
       </div>
     </section>
+    <!-- //brunch_keyword -->
     <!-- brunch_weekly -->
     <section class="brunch_weekly">
       <div class="brunch_weekly_inner">
@@ -2795,6 +2808,7 @@
         </div>
       </div>
     </section>
+    <!-- //brunch_weekly -->
     <!-- brunch_writers -->
     <section class="brunch_writer">
       <div class="brunch_writer_inner">
@@ -2816,104 +2830,104 @@
               <!-- flex이용한 상하구분(위) -->
               <div>
                 <!-- brunch_writer 사진-1 -->
-                <a href="#none" class="brunch_writer_sort">
-                  <div class="brunch_writer_intro">
+                <div class="brunch_writer_sort">
+                  <a href="#none" class="brunch_writer_intro">
                     <div class="brunch_writer_img">
                       <img src="https://picsum.photos/75">
                     </div>
                     <h3>뚜벅이는 윤슬</h3>
                     <h5>크리에이터</h5>
                     <p>인생을 여행으로 만들며 뚜벅뚜벅 걷는 여행사출신 여행 에디터&사진작가 입니다.세계여행·뚜벅이여행 등 국내외 여행 이야기와 일상</p>
-                  </div>
+                  </a>
                   <div class="brunch_writer_tag">
-                    <button>사진</button>
-                    <button>여행</button>
-                    <button>···</button>
+                    <a href="#none">사진</a>
+                    <a href="#none">여행</a>
+                    <a href="#none">···</a>
                   </div>
-                </a>
+                </div>
                 <!-- brunch_writer 사진-2 -->
-                <a href="#none" class="brunch_writer_sort">
-                  <div class="brunch_writer_intro">
+                <div class="brunch_writer_sort">
+                  <a href="#none" class="brunch_writer_intro">
                     <div class="brunch_writer_img">
                       <img src="https://picsum.photos/75">
                     </div>
                     <h3>쭈야씨</h3>
                     <h5>디자이너</h5>
                     <p>쓰고 찍고 그리고 만드는 일상이야기 수집가 :D</p>
-                  </div>
+                  </a>
                   <div class="brunch_writer_tag">
-                    <button>사진</button>
-                    <button>드로잉</button>
-                    <button>···</button>
+                    <a href="#none">사진</a>
+                    <a href="#none">드로잉</a>
+                    <a href="#none">···</a>
                   </div>
-                </a>
+                </div>
                 <!-- brunch_writer 사진-3 -->
-                <a href="#none" class="brunch_writer_sort">
-                  <div class="brunch_writer_intro">
+                <div class="brunch_writer_sort">
+                  <a href="#none" class="brunch_writer_intro">
                     <div class="brunch_writer_img">
                       <img src="https://picsum.photos/75">
                     </div>
                     <h3>글쓰는 사진작가 혜류</h3>
                     <h5>예술적온도 포토그래퍼</h5>
                     <p>예술적온도 대표/포토그래퍼이자 컨텐츠 제작자</p>
-                  </div>
+                  </a>
                   <div class="brunch_writer_tag">
-                    <button>사진</button>
-                    <button>에세이</button>
-                    <button>···</button>
+                    <a href="#none">사진</a>
+                    <a href="#none">에세이</a>
+                    <a href="#none">···</a>
                   </div>
-                </a>
+                </div>
               </div>
               <!-- flex이용한 상하구분(아래) -->
               <div>
                 <!-- brunch_writer 사진-4 -->
-                <a href="#none" class="brunch_writer_sort">
-                  <div class="brunch_writer_intro">
+                <div class="brunch_writer_sort">
+                  <a href="#none" class="brunch_writer_intro">
                     <div class="brunch_writer_img">
                       <img src="https://picsum.photos/75">
                     </div>
                     <h3>김진빈</h3>
                     <h5>에디터</h5>
                     <p>글 쓰는 본업이 잘 풀리지 않을때면, 빈 문서를 열어 또 다른 글을 씁니다.</p>
-                  </div>
+                  </a>
                   <div class="brunch_writer_tag">
-                    <button>사진</button>
-                    <button>라이프스타일</button>
-                    <button>···</button>
+                    <a href="#none">사진</a>
+                    <a href="#none">라이프스타일</a>
+                    <a href="#none">···</a>
                   </div>
-                </a>
+                </div>
                 <!-- brunch_writer 사진-5 -->
-                <a href="#none" class="brunch_writer_sort">
-                  <div class="brunch_writer_intro">
+                <div class="brunch_writer_sort">
+                  <a href="#none" class="brunch_writer_intro">
                     <div class="brunch_writer_img">
                       <img src="https://picsum.photos/75">
                     </div>
                     <h3>김진영</h3>
                     <h5>여행자의식탁 회사원</h5>
                     <p>28년차 식품MD가 풀어내는 식재료 이야기입니다.SBS 폼나게 먹자와 OTVN 어쩌다 어른에출연 유튜브 채널 여행자의 식탁 운영중</p>
-                  </div>
+                  </a>
                   <div class="brunch_writer_tag">
-                    <button>사진</button>
-                    <button>요리</button>
-                    <button>···</button>
+                    <a href="#none">사진</a>
+                    <a href="#none">요리</a>
+                    <a href="#none">···</a>
                   </div>
-                </a>
+                </div>
                 <!-- brunch_writer 사진-6 -->
-                <a href="#none" class="brunch_writer_sort">
-                  <div class="brunch_writer_intro">
+                <div class="brunch_writer_sort">
+                  <a href="#none" class="brunch_writer_intro">
                     <div class="brunch_writer_img">
                       <img src="https://picsum.photos/75">
                     </div>
                     <h3>동동이</h3>
                     <h5>학교밖청소년지원센터 상담사</h5>
                     <p>필름카메라를 찍습니다. 시를 읽습니다. 글을끄적입니다. 청소년이 건강한 사회를 꿈꿉니다. 가끔 기고와 강연을 합니다.</p>
-                  </div>
+                  </a>
                   <div class="brunch_writer_tag">
-                    <button>사진</button>
-                    <button>심리</button>
-                    <button>···</button>
+                    <a href="#none">사진</a>
+                    <a href="#none">심리</a>
+                    <a href="#none">···</a>
                   </div>
-                </a>
+                </div>
               </div>
             </div>
             <!-- burnch_writer content IT -->
@@ -2921,8 +2935,8 @@
               <!-- flex이용한 상하구분(위) -->
               <div>
                 <!-- brunch_writer IT-1 -->
-                <a href="#none" class="brunch_writer_sort">
-                  <div class="brunch_writer_intro">
+                <div class="brunch_writer_sort">
+                  <a href="#none" class="brunch_writer_intro">
                     <div class="brunch_writer_img">
                       <img src="https://picsum.photos/75">
                     </div>
@@ -2931,16 +2945,16 @@
                     <p>
                       "나는 처세술 대신 테이터 분석을 택했다"저자. 데이터와 삶의 깨달음에 대해 쓰고, 데이터는 모두에게 동등한 기회를 제공하는가에 답하
                     </p>
-                  </div>
+                  </a>
                   <div class="brunch_writer_tag">
-                    <button>IT</button>
-                    <button>에세이</button>
-                    <button>···</button>
+                    <a href="#none">IT</a>
+                    <a href="#none">에세이</a>
+                    <a href="#none">···</a>
                   </div>
-                </a>
+                </div>
                 <!-- brunch_writer IT-2 -->
-                <a href="#none" class="brunch_writer_sort">
-                  <div class="brunch_writer_intro">
+                <div class="brunch_writer_sort">
+                  <a href="#none" class="brunch_writer_intro">
                     <div class="brunch_writer_img">
                       <img src="https://picsum.photos/75">
                     </div>
@@ -2949,67 +2963,67 @@
                     <p>
                       Inspired By Essencel!디지털 에이전시 유플리트입니다.금융을 포함한 다양한 IT업계의소식 및 인사이트를 전달합니다.
                     </p>
-                  </div>
+                  </a>
                   <div class="brunch_writer_tag">
-                    <button>IT</button>
-                    <button>UX</button>
-                    <button>···</button>
+                    <a href="#none">IT</a>
+                    <a href="#none">UX</a>
+                    <a href="#none">···</a>
                   </div>
-                </a>
+                </div>
                 <!-- brunch_writer IT-3 -->
-                <a href="#none" class="brunch_writer_sort">
-                  <div class="brunch_writer_intro">
+                <div class="brunch_writer_sort">
+                  <a href="#none" class="brunch_writer_intro">
                     <div class="brunch_writer_img">
                       <img src="https://picsum.photos/75">
                     </div>
                     <h3>김지영입니다</h3>
                     <h5>원더우먼 에디터</h5>
                     <p>다양한 관심사와 생각을 공유합니다.</p>
-                  </div>
+                  </a>
                   <div class="brunch_writer_tag">
-                    <button>IT</button>
-                    <button>취미</button>
-                    <button>···</button>
+                    <a href="#none">IT</a>
+                    <a href="#none">취미</a>
+                    <a href="#none">···</a>
                   </div>
-                </a>
+                </div>
               </div>
               <!-- flex이용한 상하구분(아래) -->
               <div>
                 <!-- brunch_writer IT-4 -->
-                <a href="#none" class="brunch_writer_sort">
-                  <div class="brunch_writer_intro">
+                <div class="brunch_writer_sort">
+                  <a href="#none" class="brunch_writer_intro">
                     <div class="brunch_writer_img">
                       <img src="https://picsum.photos/75">
                     </div>
                     <h3>기묘한</h3>
                     <h5>기획자</h5>
                     <p>트랜드 수집가, 공부하기 위해 기록합니다. 지식을 나누며 함께 성장하고 싶습니다.</p>
-                  </div>
+                  </a>
                   <div class="brunch_writer_tag">
-                    <button>IT</button>
-                    <button>마케팅</button>
-                    <button>···</button>
+                    <a href="#none">IT</a>
+                    <a href="#none">마케팅</a>
+                    <a href="#none">···</a>
                   </div>
-                </a>
+                </div>
                 <!-- brunch_writer IT-5 -->
-                <a href="#none" class="brunch_writer_sort">
-                  <div class="brunch_writer_intro">
+                <div class="brunch_writer_sort">
+                  <a href="#none" class="brunch_writer_intro">
                     <div class="brunch_writer_img">
                       <img src="https://picsum.photos/75">
                     </div>
                     <h3>박샤넬로</h3>
                     <h5>기획자</h5>
                     <p>스타트업에서 프로덕트 매니저(PM)로 도전하며 인사이트를 전달하고 있습니다.</p>
-                  </div>
+                  </a>
                   <div class="brunch_writer_tag">
-                    <button>IT</button>
-                    <button>스타트업</button>
-                    <button>···</button>
+                    <a href="#none">IT</a>
+                    <a href="#none">스타트업</a>
+                    <a href="#none">···</a>
                   </div>
-                </a>
+                </div>
                 <!-- brunch_writer IT-6 -->
-                <a href="#none" class="brunch_writer_sort">
-                  <div class="brunch_writer_intro">
+                <div class="brunch_writer_sort">
+                  <a href="#none" class="brunch_writer_intro">
                     <div class="brunch_writer_img">
                       <img src="https://picsum.photos/75">
                     </div>
@@ -3018,13 +3032,13 @@
                     <p>
                       카카오벤처스의 공식 블로그 입니다. 카카오벤처스와 함께하는 모두의 이야기를 담아냅니다.
                     </p>
-                  </div>
+                  </a>
                   <div class="brunch_writer_tag">
-                    <button>IT</button>
-                    <button>경영</button>
-                    <button>···</button>
+                    <a href="#none">IT</a>
+                    <a href="#none">경영</a>
+                    <a href="#none">···</a>
                   </div>
-                </a>
+                </div>
               </div>
             </div>
             <!-- burnch_writer content 자기계발 -->
@@ -3032,8 +3046,8 @@
               <!-- flex이용한 상하구분(위) -->
               <div>
                 <!-- brunch_writer 자기계발-1 -->
-                <a href="#none" class="brunch_writer_sort">
-                  <div class="brunch_writer_intro">
+                <div class="brunch_writer_sort">
+                  <a href="#none" class="brunch_writer_intro">
                     <div class="brunch_writer_img">
                       <img src="https://picsum.photos/75">
                     </div>
@@ -3042,67 +3056,67 @@
                     <p>
                       [경제 커뮤니케이터] 경제 초보를 대상으로 경제와 돈 이야기를 쉽게 풀어씁니다. 칼럼기고및 강연도 합니다.
                     </p>
-                  </div>
+                  </a>
                   <div class="brunch_writer_tag">
-                    <button>자기계발</button>
-                    <button>경제</button>
-                    <button>···</button>
+                    <a href="#none">자기계발</a>
+                    <a href="#none">경제</a>
+                    <a href="#none">···</a>
                   </div>
-                </a>
+                </div>
                 <!-- brunch_writer 자기게발-2 -->
-                <a href="#none" class="brunch_writer_sort">
-                  <div class="brunch_writer_intro">
+                <div class="brunch_writer_sort">
+                  <a href="#none" class="brunch_writer_intro">
                     <div class="brunch_writer_img">
                       <img src="https://picsum.photos/75">
                     </div>
                     <h3>장뚜기</h3>
                     <h5>마케터</h5>
                     <p>이커머스 콘텐츠 마케터/에디터</p>
-                  </div>
+                  </a>
                   <div class="brunch_writer_tag">
-                    <button>자기계발</button>
-                    <button>마케팅</button>
-                    <button>···</button>
+                    <a href="#none">자기계발</a>
+                    <a href="#none">마케팅</a>
+                    <a href="#none">···</a>
                   </div>
-                </a>
+                </div>
                 <!-- brunch_writer 자기계발-3 -->
-                <a href="#none" class="brunch_writer_sort">
-                  <div class="brunch_writer_intro">
+                <div class="brunch_writer_sort">
+                  <a href="#none" class="brunch_writer_intro">
                     <div class="brunch_writer_img">
                       <img src="https://picsum.photos/75">
                     </div>
                     <h3>Jade in x</h3>
                     <h5>크리에이터</h5>
                     <p>나에게 틀린 선택은 없으니까,오늘도 나답게.</p>
-                  </div>
+                  </a>
                   <div class="brunch_writer_tag">
-                    <button>자기계발</button>
-                    <button>에세이</button>
-                    <button>···</button>
+                    <a href="#none">자기계발</a>
+                    <a href="#none">에세이</a>
+                    <a href="#none">···</a>
                   </div>
-                </a>
+                </div>
               </div>
               <!-- flex이용한 상하구분(아래) -->
               <div>
                 <!-- brunch_writer 자기계발-4 -->
-                <a href="#none" class="brunch_writer_sort">
-                  <div class="brunch_writer_intro">
+                <div class="brunch_writer_sort">
+                  <a href="#none" class="brunch_writer_intro">
                     <div class="brunch_writer_img">
                       <img src="https://picsum.photos/75">
                     </div>
                     <h3>하프타임 크래프트</h3>
                     <h5>하프타임크래프트 아티스트</h5>
                     <p>작은 가죽 공방을 운영하는 작가입니다.^^</p>
-                  </div>
+                  </a>
                   <div class="brunch_writer_tag">
-                    <button>자기계발</button>
-                    <button>취미</button>
-                    <button>···</button>
+                    <a href="#none">자기계발</a>
+                    <a href="#none">취미</a>
+                    <a href="#none">···</a>
                   </div>
-                </a>
+                </div>
                 <!-- brunch_writer 자기계발-5 -->
-                <a href="#none" class="brunch_writer_sort">
-                  <div class="brunch_writer_intro">
+                <div class="brunch_writer_sort">
+                  <a href="#none" class="brunch_writer_intro">
                     <div class="brunch_writer_img">
                       <img src="https://picsum.photos/75">
                     </div>
@@ -3111,16 +3125,16 @@
                     <p>
                       경제와 돈에 대한 이야기를 알게 쉽게 글로 씁니다.<br>honoluluzoo@naver.com
                     </p>
-                  </div>
+                  </a>
                   <div class="brunch_writer_tag">
-                    <button>자기계발</button>
-                    <button>재태크</button>
-                    <button>···</button>
+                    <a href="#none">자기계발</a>
+                    <a href="#none">재태크</a>
+                    <a href="#none">···</a>
                   </div>
-                </a>
+                </div>
                 <!-- brunch_writer 자기계발-6 -->
-                <a href="#none" class="brunch_writer_sort">
-                  <div class="brunch_writer_intro">
+                <div class="brunch_writer_sort">
+                  <a href="#none" class="brunch_writer_intro">
                     <div class="brunch_writer_img">
                       <img src="https://picsum.photos/75">
                     </div>
@@ -3129,11 +3143,11 @@
                     <p>
                       직장인모험가 & 오지레이서, 나는 여행을 핑계삼아 지난 19년동안 지구상 곳곳의 사막과 오지를 넘나들고 있다. 하지만 그 끝이 어디인지
                     </p>
-                  </div>
+                  </a>
                   <div class="brunch_writer_tag">
-                    <button>자기계발</butt>
-                    <button>건강</butt>
-                    <button>···</butt>
+                    <a href="#none">자기계발</a>
+                    <a href="#none">건강</a>
+                    <a href="#none">···</a>
                   </div>
                 </a>
               </div>
@@ -3142,12 +3156,14 @@
         </div>
       </div>
     </section>
+    <!-- //brunch_wirters -->
     <!-- brunch_apply_banner -->
     <section class="brunch_apply_banner">
-      <div class="brunch_apply_banner_inner">
+      <a href="#none" class="brunch_apply_banner_inner">
         <img src="https://t1.daumcdn.net/brunch/static/test/new_pc_top/5.png">
-      </div>
+      </a>
     </section>
+    <!-- //brunch_apply_banner -->
     <!-- brunch_articles -->
     <section class="brunch_articles">
       <div class="brunch_articles_inner">
@@ -3325,13 +3341,53 @@
       </div>
     </section>
     <!--// brunch_articles -->
-
     <!-- footer -->
     <footer>
       <div class="footer_inner">
-        
+        <div>
+          <div class="footer_info title">
+            <div class="footer_info title_img"></div>
+            <h5>You can make anything<br>by writing</h5>
+            <p>C.S.Lewis</p>
+          </div>
+          <div class="footer_info menu_wrap">
+            <ul>
+              <li><a href="#none">브런치 이용안내</a></li>
+              <li><a href="#none">작가신청</a></li>
+              <li><a href="#none">작가 지원 프로젝트</a></li>
+              <li><a href="#none">제휴제안</a></li>
+              <li><a href="#none">고객센터</a></li>
+            </ul>
+            <ul>
+              <li><a href="#none">이용안내</a></li>
+              <li><a href="#none">이전 이용약관</a></li>
+              <li><a href="#none">카카오 유료서비스 이용약관</a></li>
+              <li><a href="#none">카카오 개인정보 처리방침</a></li>
+              <li><a href="#none">청소년 보호정책</a></li>
+              <li><a href="#none">운영정책</a></li>
+            </ul>
+            <ul>
+              <li><a href="#none">브런치스토리팀 공지사항</a></li>
+              <li><a href="#none">공식 카카오톡 채널</a></li>
+              <li><a href="#none">공식 인스타그램</a></li>
+              <li><a href="#none">공식 페이스북</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer_corp">
+          <div>@ kakao Corp.</div>
+          <div>
+            <a href="#none">
+              <span class="footer_icon android"></span>
+            </a>
+            <a href="#none">
+              <span class="footer_icon ios"></span>
+            </a>
+          </div>
+        </div>
       </div>
     </footer>
+    <!-- footer -->
   </div>
 </body>
 </html>

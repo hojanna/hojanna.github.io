@@ -1,4 +1,24 @@
+$(window).scroll(function(){
+  if($(window).scrollTop() > 64 ){
+    $('header').addClass('active')
+  }else{
+    $('header').removeClass('active')
+  }
+  if($(window).scrollTop() > 354){
+    $('header').removeClass('active')
+  }
+})
+
 $(document).ready(function(){
+  /* menu_more_button */
+  $('.menu_more_button').click(function(){
+    $('.header_more').addClass('active')
+    $('.close_overlay').addClass('active')
+  })
+  $('.close_overlay').click(function(){
+    $('.header_more').removeClass('active')
+    $(this).removeClass('active')
+  })
   /* brunch news */
   $('.brunch_news.sliders').slick({
     arrows:false,
@@ -7,7 +27,7 @@ $(document).ready(function(){
     autoplay:true,
     autoplaySpeed:2000,
     vertical:true,
-    verticalSwiping:true,
+    verticalSwiping:false,
   })
   /* brunch recommend */
   $('.brunch_recommend.sliders').slick({
@@ -22,7 +42,8 @@ $(document).ready(function(){
  $('.brunch_articles_sliders').slick({
     dots:false,
     arrows:true,
-    slideToShow:5,
+    slidesToShow:5,
+    slidesToScroll:5,
  });
   /* tab메뉴 */
   $('.brunch_weekly_tab').click(function(){

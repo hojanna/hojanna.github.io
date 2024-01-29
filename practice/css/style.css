@@ -13,28 +13,189 @@ header{
   padding:10px;
   position: sticky;
   top:0;
-  background-color: #fff;
-  z-index: 99;  
+  z-index: 99;
+  transition: 0.35s;
 }
-.header_more{
-  position: absolute;
-  background-color: red;
+header.active{
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.35s;
+}
+.close_overlay{
+  position: fixed;
   top:0;
-  left:-1000px;
+  right:0;
+  width:calc(100% - 250px);
+  height:100vh;
+  display: none;
+}
+.close_overlay.active{
+  display: block;
+}
+/* header-more(sidebar) */
+.header_more{
+  position:fixed;
+  top:0;
+  left:-250px;
+  width:250px;
+  height:100vh;
+  border-right:1px solid #ddd;
+  background-color: #fff;
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+  transition: 0.5s;
 }
 .header_more.active{
   left:0;
 }
+.header_more_top{
+  flex:2;
+  background-color: #f3f3f3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+.header_more_top_img{
+  width:50px;
+  height:50px;
+  background: url(https://t1.daumcdn.net/brunch9/static/images/pc/ico_brunch_v9_230901.png) no-repeat;
+  background-position: -351px 0;
+}
+.header_more_top div:nth-child(2){
+  font-style: italic;
+  padding:10px 0;
+}
+.header_more_top div:nth-child(2) h5{
+  font-size: 14px;
+  line-height: 1.4;
+} 
+.header_more_top div:nth-child(2) h6{
+  margin-top: 5px;
+  margin-bottom: 25px;
+  font-size: 12px;
+}
+.header_more_top a{
+  border:1px solid #7bd3ea;
+  color:#7bd3ea;
+  background-color: #fff;
+  padding:10px 15px;
+  font-size: 14px;
+  border-radius: 20px;
+}
+.header_more_bottom{
+  flex:5;
+  padding:40px 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.header_more_bottom_menu{
+  display: flex;
+  flex-direction: column;
+  font-size: 15px;
+  gap:25px;
+}
+.header_more_bottom_menu a{
+  color:#777;
+}
+.header_more_bottom_menu a:nth-child(1){
+  color:#7bd3ea;
+  position: relative;
+}
+.header_more_bottom_menu a:nth-child(1)::before{
+  content: '';
+  position:absolute;
+  top:50%;
+  left:30px;
+  width:13px;
+  height:1px;
+  background-color: #7bd3ea;
+}
+.header_more_bottom_menu a:nth-child(1)::after{
+  content: '';
+  position:absolute;
+  top:50%;
+  right:30px;
+  width:13px;
+  height:1px;
+  background-color: #7bd3ea;
+}
+.header_more_bottom_menu a:nth-child(2),
+.header_more_bottom_menu a:nth-child(3){
+  position: relative;
+}
+.header_more_bottom_menu a:nth-child(2):hover,
+.header_more_bottom_menu a:nth-child(3):hover{
+  color:#7bd3ea;
+}
+.header_more_bottom_menu a:nth-child(2):hover::before,
+.header_more_bottom_menu a:nth-child(2):hover::after,
+.header_more_bottom_menu a:nth-child(3):hover::before,
+.header_more_bottom_menu a:nth-child(3):hover::after{
+  display: block;
+}
+.header_more_bottom_menu a:nth-child(2)::before,
+.header_more_bottom_menu a:nth-child(3)::before{
+  content: '';
+  position:absolute;
+  top:50%;
+  left:35px;
+  width:8px;
+  height:1px;
+  background-color: #7bd3ea;
+  display: none;
+}
+.header_more_bottom_menu a:nth-child(2)::after,
+.header_more_bottom_menu a:nth-child(3)::after{
+  content: '';
+  position:absolute;
+  top:50%;
+  right:35px;
+  width:8px;
+  height:1px;
+  background-color: #7bd3ea;
+  display: none;
+}
+.header_more_bottom_content div:nth-child(2){
+  margin-top: 50px;
+}
+.header_more_bottom_content div:nth-child(2) a{
+ color:#777;
+ font-size: 14px;
+ text-decoration: underline;
+}
+.header_more_bottom_img{
+  width:100%;
+  height:100px;
+  background: url(https://i1.daumcdn.net/thumb/R336x0/?fname=http://t1.daumcdn.net/brunch/static/img/help/pc/top/side_banner_20221221.png) no-repeat center;
+  background-size: 200px;
+}
+.header_more_bottom_content > a{
+  display: block;
+}
+/* //header-more(sidebar) */
+/* header_title(main) */
 .header_title{
   display: flex;
   justify-content: space-between;
   padding:10px;
+  background-color: #fff;
+  opacity: 0.9;
 }
 .header_side_l{
   display: flex;
   align-items: center;
   gap: 15px;
-  padding-left: 10px;  
+  padding-left: 10px; 
+}
+.header_side_l button{
+  background-color: transparent;
+  border:none;
 }
 .header_side_l i{
   font-size: 36px;
@@ -44,6 +205,7 @@ header{
   position:relative;
   font-size: 22px;
   font-weight: 600;
+  transform: translateY(-2px);
 }
 .header_logo:after{
   content: '';
@@ -70,10 +232,13 @@ header{
 .header_side_search i{
   font-size: 28px;
 }
+/* //header_title(main) */
 /* ************ brunch_intro *********** */
 .brunch_intro{
   margin:0 auto;
   width:1020px;
+  height:200px;
+  line-height: 200px;
   padding:20px 0;
   line-height: 1.3;
 }
@@ -91,7 +256,7 @@ header{
   color:#ddd;
   font-size: 36px;
 }
-
+/* //************ brunch_intro *********** */
 /* **************brunch_news************ */
 .brunch_news{
   margin:0 auto;
@@ -105,7 +270,8 @@ header{
 .brunch_news.sliders span{
   font-style: italic;
   color:#7bd3ea;
-  font-size: 14px;
+  font-size: 13px;
+  font-weight: 600;
 }
 .brunch_news.slider a{
   color:#000;
@@ -119,6 +285,7 @@ header{
 .brunch_recommend{
   width:100%;
   position: relative;
+  
 }
 .brunch_recommend.sliders{
   position:relative;
@@ -140,7 +307,7 @@ header{
 }
 .brunch_recommend.wrap:hover .brunch_recommend.img_wrap:before{
   opacity: 0.5;
-  transition:0.35s;
+  transition:0.5s;
 }
 .brunch_recommend.img_wrap{
   position: absolute;
@@ -182,7 +349,7 @@ header{
 .brunch_recommend .slick-prev,
 .brunch_recommend .slick-next{
   position:absolute;
-  z-index: 99;
+  z-index: 9;
   width:100px;
   height:100px;
   border-radius: 50%;
@@ -419,13 +586,15 @@ header{
 }
 .brunch_weekly_tab{
   cursor: pointer;
-  padding:0 40px;
+  margin:0 20px;
+  padding:0 20px;
   padding-bottom: 10px;
   position:relative;
   border:none;
   background-color:transparent;
   font-size: 16px;
   color:#bbb;
+  transition: 0.35s;
   }
 .brunch_weekly_tab::after{
   position: absolute;
@@ -434,7 +603,7 @@ header{
   left:50%;
   transform: translateX(-50%);
   margin:0 auto;
-  width:50%;
+  width:80%;
   height:1px;
   background-color:#7bd3ea;
   display: none;
@@ -445,13 +614,11 @@ header{
 .brunch_weekly_tab.active::after{
   display: block;
 }
-/* tab임시 */
 .brunch_weekly_content.active{
   display: block;
 }
 .brunch_weekly_content{
   display: none ;
-  /* position: relative; */
 }
 .brunch_weekly_sort_tabs{
   display: flex;
@@ -620,6 +787,7 @@ header{
   color:#777;
   border-radius: 30px;
   cursor: pointer;
+  transition: 0.35s;
 }
 .brunch_writer_tab.active{
   border-color: #7bd3ea;
@@ -639,14 +807,18 @@ header{
   gap: 20px;
 }
 .brunch_writer_sort{
+  position: relative;
+  flex:1;
   background-color: #fff;
   text-align: center;
-  padding:30px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  gap:30px;
-  min-height: 320px;
+  height:330px;
+  padding:30px 20px 0 20px;
+}
+.brunch_writer_intro{
+  position: relative;
+  width:100%;
+  height:330px;
+  display: block;
 }
 .brunch_writer_intro h3{
   font-size: 24px;
@@ -660,7 +832,7 @@ header{
 .brunch_writer_intro p{
   color:#959595;
   font-size: 14px;
-  width:250px;
+  width:100%;
   line-height: 1.3;
   word-break:keep-all;
 }
@@ -673,15 +845,20 @@ header{
 .brunch_writer_tag{
   display: flex;
   justify-content: center;
-  gap: 5px;
+  gap: 10px;
+  position:absolute;
+  bottom:20px;
+  left:50%;
+  transform: translateX(-50%);
 }
-.brunch_writer_tag button{
+.brunch_writer_tag a{
   background-color: transparent;
   border:1px solid #ddd;
   color:#777;
   padding:5px 10px;
   cursor: pointer;
   border-radius: 20px;
+  white-space: nowrap;
 }
 /* *********brunch_apply_banner********* */
 .brunch_apply_banner{
@@ -694,35 +871,23 @@ header{
   width:100%;
   position: relative;
   margin-bottom: 100px;
-  /* overflow: hidden; */
 }
 .brunch_articles_wrap{
   position: relative;
   width:100%;
-  /* padding:0 20px; */
 }
 .brunch_articles_sliders{
   position: relative;
   width:100%;
   height:auto;
-}
-.brunch_articles_slider{
-  width: 100%;
-  height:auto;
-  margin:0 50px;
-  display: flex;
-  flex-direction: row;
-}
-.brunch_articles_slider.slick-slide{
-  border:1px solid gold;
-  display: flex;
+  padding:0 10px;
 }
 .brunch_article_sort{
   display: block;
-  flex:1;
+  padding:0 10px;
 }
 .brunch_article.img_box{
-  width:200px;
+  width:inherit;
   height:300px;
 }
 .brunch_article.img_box img{
@@ -730,7 +895,7 @@ header{
   height:inherit;
   object-fit: cover;
 }
-.brunch_article_slider h5{
+.brunch_article_sort h5{
   padding:10px 0;
   color:#999;
   line-height: 1.4;
@@ -757,7 +922,7 @@ header{
 .brunch_articles .slick-prev,
 .brunch_articles .slick-next{
   position:absolute;
-  z-index: 99;
+  z-index: 9;
   width:100px;
   height:100px;
   border-radius: 50%;
@@ -780,4 +945,90 @@ header{
   font-family: 'ionicons';
   opacity: 1;
   color:#fff;
+}
+/* footer */
+footer{
+  position: relative;
+  background-color: #000;
+  color:#fff;
+}
+.footer_inner{
+  width:1020px;
+  margin:0 auto;
+  padding:50px 0;
+  display: flex;
+  flex-direction: column;
+}
+.footer_inner > div:nth-child(1){
+  border-bottom: 1px solid #777;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-bottom: 50px;
+}
+.footer_info.title{
+  font-style: italic;
+}
+.footer_info.title_img{
+  background: url(https://t1.daumcdn.net/brunch9/static/images/pc/ico_brunch_v9_230901.png) no-repeat;
+  background-position: -320px -112px;
+  width:32px;
+  height:32px;
+  margin-bottom: 20px;
+}
+.footer_info.title h5{
+  font-size: 18px;
+  font-weight: 300;
+  margin-bottom: 10px;
+}
+.footer_info.title p{
+  font-size: 14px;
+}
+.footer_info.menu_wrap{
+  display: flex;
+  gap:50px;
+}
+.footer_info.menu_wrap li{
+  padding:5px 0;
+}
+.footer_info.menu_wrap li a{
+  color:#777;
+  font-size: 15px;
+}
+.footer_info.menu_wrap li a:hover{
+  color:#fff;
+  text-decoration: underline;
+}
+.footer_corp{
+  padding:30px 0;
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+}
+.footer_corp div:nth-child(1){
+  font-size: 14px;
+  color:#777;
+  font-weight: 600;
+  font-style: italic;
+}
+.footer_corp div:nth-child(2){
+  display: flex;
+  gap:10px;
+}
+.footer_corp div:nth-child(2) a{
+  width:25px;
+  height:25px;
+  display: block;
+}
+.footer_icon{
+  display: block;
+  width:20px;
+  height:22px;
+  background: url(https://t1.daumcdn.net/brunch9/static/images/pc/ico_brunch_v9_230901.png) no-repeat;
+}
+.footer_icon.android{
+  background-position: -260px -100px;
+}
+.footer_icon.ios{
+  background-position: -290px -100px;
 }
